@@ -1,0 +1,56 @@
+.topbar-inner, .topbar .fill {
+    background-color: red;
+    background-image: -webkit-linear-gradient(top, #333, #FF4242);
+    background-image: -o-linear-gradient(top, #333, #FF4242);
+    background-image: linear-gradient(top, #333, #FF4242);
+}
+
+
+.homesni {
+    padding-top: 10%;
+    background-color: black;
+}
+
+.homesni h2{
+    font-weight: bold;
+    color: #00ccff;
+    font-size: 100px;
+    text-decoration: underline;
+    background-color: black;
+}
+
+.loginhome{
+    text-align: center;
+    padding-top: 5%;
+}
+
+.search{
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.search input{
+    width: 100%;
+    padding: 12px 20px;
+    margin-right: 4%;
+    box-sizing: border-box;
+}
+
+
+.addbutton a{
+    color: #00ccff;
+    border: white solid 2px;
+    padding: 15%;
+}
+
+.nameprofile{
+    padding-top: 6%;
+}
+
+.notifications{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 2%;
+    border: black solid 1px;
+}

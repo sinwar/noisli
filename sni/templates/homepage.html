@@ -1,0 +1,127 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/sni.css">
+{% endblock %}
+
+{% block head_title %}NOISLII{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body_base %}
+    <section class="jumbotron">
+        <div class="container">
+            {% include "_messages.html" %}
+            {% if not user.is_authenticated %}
+            {% url "account_login" as login_url %}
+            {% url "account_signup" as signup_url %}
+
+            <div class="container homesni">
+                <h2 class="text-center">{% blocktrans %}NOISLII{% endblocktrans %}</h2>
+                <p class="text-center">
+                    {% blocktrans %}
+                    Django web app for sound management. Contribute with 
+                    <a href="https://github.com/sinwar/noisli">GitHub</a>.
+                    {% endblocktrans %}
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 loginhome" style="padding-bottom: 30%;">
+                    <p>
+                        {% blocktrans %}
+                            Already have account <a href="{{ login_url }}" class="btn btn-default">Log In</a>
+                        {% endblocktrans %}
+                    </p> <br>
+                    <p>
+                        {% blocktrans %}
+                            New here <a href="{{ signup_url }}" class="btn" style="background-color: #b8e098; color: white; font-weight: bold;">Sign Up</a>
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+            {% else %}
+
+            <!-- content to be shown when use logged in -->
+                <div class="col-md-3 col-md-offset-8 addbutton">
+                    <a href="{%url 'add_item' %}" class="button btn-lg active"><i class="fa fa-plus fa-2x" > ADD</i></a>
+                </div>
+                <br><br>
+
+                <div class="text-center sounds">    
+                  <div class="row content">
+
+                    <div class="col-md-6" id="left">
+
+                      <img src="/site_media/media/thunder.png" title="ThunderStorm">
+                    
+                      <br>
+                      <button id="playthunder" class='thunder'>Play</button>
+                      <br><br>
+
+                      <img src="/site_media/media/wind.png" title="Wind">
+                      <br>
+                      <button id="playwind" class="wind">Play</button>
+                      <br><br>
+
+                      <img src="/site_media/media/seaside.png" title="SeaSide">
+                      <br>
+                      <button id="playseaside" class="seaside">Play</button>
+                      <br><br>
+
+                      <img src="/site_media/media/summernight.png" title="SummerNight">
+                      <br>
+                      <button id="/site_media/media/playsummerNight" class="summernight">Play</button>
+                      <br><br>
+
+                    </div>
+
+
+                    <div class="col-md-6" id="right">
+
+                      <img src="/site_media/media/fire.png" title="Fire">
+                      <br>
+                      <button id="playfire" class="fire">Play</button>
+                      <br><br>
+                            
+                      <img src="/site_media/media/forest.png" title="Forest">
+                      <br>
+                      <button id="playforest" class="forest">Play</button>
+                      <br><br>
+
+                      <img src="/site_media/media/waterstream.png" title="WaterStream">
+                      <br>
+                      <button id="playwaterstream" class="waterstream">Play</button>
+                      <br><br>
+
+
+                    </div>
+
+                </div>
+                <div class="row usersounds">
+                    <!-- sounds added by user -->
+                    <br>
+                    <h2 class="text-center"> Sound added by {{ user }} <h2>
+                    <br>
+                    {% for i, j, k in things %}
+                        <div class="col-md-6">
+
+                              <img src="{{ j }}" title="ThunderStorm" height="200px" width="200px">
+                              <br>
+                              
+                              <br>
+                              <button id="{{ k }}" class='playsoundbyuser'>Play</button>
+                              <button id="{{ k }}" class='pausesoundbyuser'>Pause</button>
+                              <br><br>
+                        </div>
+
+                    {% endfor %}
+
+                  </div>
+                </div>
+            
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

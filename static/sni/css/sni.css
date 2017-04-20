@@ -1,0 +1,81 @@
+.home {
+    background-color: white;
+}
+.homesni {
+    padding-top: 10%;
+}
+
+.sounds {
+    margin-top: 5%;
+    padding: 10%;
+    background-color: #b8e098;
+}
+
+.usersounds h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.usersounds button {
+    background-color: white;
+    height: 40px;
+    width: 150px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-top: 5%;
+    font-size: 20px;
+}
+
+
+.content button {
+    background-color: white;
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-top: 5%;
+}
+
+.homesni h2{
+    font-weight: bold;
+    color: #b8e098;
+    font-size: 100px;
+
+}
+
+.loginhome{
+    text-align: center;
+    padding-top: 5%;
+}
+
+.search{
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.search input{
+    width: 100%;
+    padding: 12px 20px;
+    margin-right: 4%;
+    box-sizing: border-box;
+}
+
+
+.addbutton a{
+    color: #b8e098;
+    border: #b8e098 solid 5px;
+    padding: 10%;
+}
+
+.nameprofile{
+    padding-top: 6%;
+}
+
+.notifications{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 2%;
+    border: black solid 1px;
+}

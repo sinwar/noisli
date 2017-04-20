@@ -1,0 +1,19 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+<!-- Base file for another template views -->
+{% block body_base %}
+    <section id="content_body">
+        <div class="container">
+            {% include "_messages.html" %}
+            {% block body %}
+            {% endblock %}
+        </div>
+    </section>
+{% endblock %}
+
+{% load i18n %}
+
+{% block body_class %}account{% endblock %}
+
+
