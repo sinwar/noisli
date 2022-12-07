@@ -1,5 +1,5 @@
 appdirs==1.4.3
-certifi==2016.9.26
+certifi==2022.12.7
 dj-static==0.0.6
 Django==1.9.5
 django-appconf==1.0.2
